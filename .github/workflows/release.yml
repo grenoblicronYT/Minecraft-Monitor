@@ -44,7 +44,7 @@ jobs:
     - name: 6 - .Net - Publish
       run: |
         cd ./src
-        dotnet publish -r win-x64 -c Release --self-contained true -p:PublishSingleFile=true -p:DebugType=None -p:IsWebConfigTransformDisabled=true -p:IncludeNativeLibrariesForSelfExtract=true
+        dotnet publish -r ubuntu.22.04-x64 -c Release --self-contained true -p:PublishSingleFile=true -p:DebugType=None -p:IsWebConfigTransformDisabled=true -p:IncludeNativeLibrariesForSelfExtract=true
         
     - name: 7 - Build Artifact
       uses: actions/upload-artifact@v2
